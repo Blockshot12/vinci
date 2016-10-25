@@ -1,0 +1,26 @@
+.menneske-header {
+	background-color: $purple;
+	@include transition(margin .2s ease);
+
+	&.affix-top {
+		position: static;
+		margin-top: 160px;
+	}
+	&.affix {
+		position: static !important;
+		margin-top: 65px;
+	}
+
+	.menneske-header-title {
+		height: 120px;
+		color: $white;
+		padding: 0;
+
+		h1 {
+			font-size: 36px;
+			font-weight: 400;
+    	line-height: normal;
+			margin: 38px auto;
+		}
+	}
+}

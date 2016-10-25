@@ -1,0 +1,53 @@
+.testimonials {
+	.testimonial-slide {
+		> p {
+			line-height: 20px;
+		}
+		>.testimonial-text {
+			padding: 6px 0;
+
+			> em {
+				&:before,
+				&:after {
+			    color: #58205a;
+					quotes: "“" "”" "‘" "’";
+			    font-family: georgia,serif;
+			    font-size: 4em;
+			    font-weight: bold;
+				}
+				&:before {
+			  	content: open-quote;
+					line-height: 0.1em;
+					margin-right: 0.25em;
+					vertical-align: -0.4em;
+				}
+				&:after {
+			  	content: close-quote;
+					line-height: 0.1em;
+					margin-left: 0.2em;
+					vertical-align: -0.5em;
+				}
+			}
+		}
+		>.testimonial-author {
+			color: $red;
+			font-size: 1.47em;
+			text-transform: lowercase;
+			margin: 0;
+		}
+		>.testimonial-job {
+			color: $purple;
+			font-size: 1.1em;
+			font-weight: 400;
+			margin: 4px 0;
+
+			>a {
+				color: $purple;
+
+				&:hover {
+					color: $red;
+				}
+			}
+		}
+	}
+}

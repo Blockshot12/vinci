@@ -1,0 +1,17 @@
+.container-fluid {
+	width: 100%;
+}
+.col-sm-6,
+.col-md-6,
+.col-lg-6 {
+	&:nth-child(odd) {
+		padding-right: 20px;
+	}
+	&:nth-child(even) {
+		padding-left: 20px;
+	}
+}
+.col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6,
+.col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+	margin-bottom: 20px;
+}

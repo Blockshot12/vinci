@@ -1,0 +1,37 @@
+.menneske-main-werk-filter-btn {
+	position: relative;
+	height: 22px;
+	color: $purple;
+	font-size: 16px;
+	font-weight: 400;
+	text-transform: lowercase;
+	line-height: 15px;
+	background-color: transparent;
+	padding: 0 0 7px;
+	margin: 0 15px;
+	border: none;
+	border-radius: 0;
+
+	&:before {
+		content: "";
+		position: absolute;
+		left: 50%;
+		right: 50%;
+		bottom: 0;
+		height: 2px;
+		background-color: #d30505;
+		transition: all 0.25s ease-in-out;
+		z-index: -1;
+	}
+	&:hover,
+	&:active,
+	&.is-active {
+		color: $red;
+		transition: color 0.15s ease;
+
+		&:before {
+			left: 0;
+			right: 0;
+		}
+	}
+}

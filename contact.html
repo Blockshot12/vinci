@@ -1,0 +1,57 @@
+---
+layout: default
+title:  "contact | "
+---
+
+<header id="header" class="container-fluid menneske-header">
+	<section class="container menneske-header-title">
+		<h1>Contact</h1>
+	</section>
+</header>
+<main class="container-fluid menneske-main">
+	<article class="container">
+		<header class="row menneske-main-header">
+			<div class="col-sm-12 text-center">
+				<h2>Contactformulier</h2>
+			</div>
+		</header>
+
+		<section class="row menneske-main-contact">
+			<form class="col-sm-6 form-horizontal menneske-main-contact-form" autocomplete="on" action="https://formspree.io/contact@blockshot.org" method="POST">
+				<div class="form-group">
+			    <label for="inputNaam">Naam<span class="menneske-form-required">*</span></label>
+			    <input type="text" name="name" class="form-control" id="inputNaam" required>
+			  </div>
+				<div class="form-group">
+			    <label for="inputEmail">E-mail<span class="menneske-form-required">*</span></label>
+			    <input type="email" name="_replyto" class="form-control" id="inputEmail" autocomplete="off" required>
+			  </div>
+				<div class="form-group">
+			    <label for="inputSubject">Onderwerp<span class="menneske-form-required">*</span></label>
+			    <input type="text" name="_subject" class="form-control" id="inputSubject" required>
+			  </div>
+				<div class="form-group">
+			    <label for="inputMessage">Onderwerp<span class="menneske-form-required">*</span></label>
+			    <textarea type="text" name="_message" class="form-control" id="inputMessage" rows="8" required></textarea>
+			  </div>
+				<input type="hidden" name="_next" value="http://blockshot.org/jekyll/thanks.html" />
+				<div class="form-group form-inline">
+					<button class="menneske-form-btn" type="submit" value="verzenden">verzenden</button>
+					<button class="menneske-form-btn" type="reset" value="wissen">wissen</button>
+				</div>
+			</form>
+
+			<div class="col-sm-6 menneske-main-contact-text">
+				<p>
+					Je kunt op alle mogelijke moderne manieren in contact met me komen. Het formulier hiernaast is heel effectief en bellen of appen kan ook. Het mooiste is natuurlijk als we elkaar in levende lijve kunnen ontmoeten. Dan vertel ik meer over mij als ‘menneske’ en hoor ik graag hoe ik jou en je organisatie eventueel kan helpen.
+				</p>
+				<p>
+					Hartelijks,<br />
+					Eveline sissing<br />
+					+31 (0)6 17 14 58 28
+				</p>
+			</div>
+		</section>
+	</article>
+
+</main>

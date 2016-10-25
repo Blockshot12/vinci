@@ -1,0 +1,41 @@
+<nav id="mainNav" class="navbar navbar-fixed-top menneske-nav">
+	<div class="container-fluid menneske-nav-container">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<a class="navbar-brand menneske-nav-logo" href="{{site.baseurl}}">Menneske</a>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="navbar-menu">
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a class="{% if page.url == '/' %}is-active{% endif %}" href="{{ site.baseurl }}/">Home</a>
+				</li>
+				<li>
+					<a class="{% if page.url == '/over-menneske.html' %}is-active{% endif %}" href="{{ site.baseurl }}over-menneske.html">Over menneske</a>
+				</li>
+				<li>
+					<a class="{% if page.url == '/werk.html' %}is-active{% endif %}" href="{{ site.baseurl }}werk.html">Werk</a>
+				</li>
+				<li>
+					<a class="{% if page.url == '/contact.html' %}is-active{% endif %}" href="{{ site.baseurl }}contact.html">Contact</a>
+				</li>
+				<li class="menneske-nav-socmed-btn">
+					<a href="https://www.facebook.com/menneske.nl/" target="_blank">
+						<i class="fa fa-facebook"></i>
+					</a>
+				</li>
+				<li class="menneske-nav-socmed-btn">
+					<a href="https://twitter.com/evelinesissing?lang=nl" target="_blank">
+						<i class="fa fa-twitter"></i>
+					</a>
+				</li>
+				<li class="menneske-nav-socmed-btn">
+					<a href="https://nl.linkedin.com/in/evelinesissing/nl" target="_blank">
+						<i class="fa fa-linkedin"></i>
+					</a>
+				</li>
+			</ul>
+		</div><!-- /.navbar-collapse -->
+	</div><!-- /.container-fluid -->
+</nav>
