@@ -1,41 +1,54 @@
-<nav id="mainNav" class="navbar navbar-fixed-top menneske-nav">
-	<div class="container-fluid menneske-nav-container">
-		<!-- Brand and toggle get grouped for better mobile display -->
-		<div class="navbar-header">
-			<a class="navbar-brand menneske-nav-logo" href="{{site.baseurl}}">Menneske</a>
+<nav id="mainNav" class="navbar">
+	<div class="navbar-container">
+    <div class="navbar-header">
+			<a class="navbar-brand home" href="{{ site.baseurl }}/" data-animate-hover="bounce">
+        Vinci <span class="sr-only">ga naar homepage</span>
+      </a>
+      <div class="navbar-buttons">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
+          <span class="sr-only">Toggle navigation</span>
+          <i class="fa fa-align-justify"></i>
+        </button>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#search">
+          <span class="sr-only">Toggle search</span>
+          <i class="fa fa-search"></i>
+        </button>
+      </div>
 		</div>
 
-		<!-- Collect the nav links, forms, and other content for toggling -->
-		<div class="navbar-menu">
-			<ul class="nav navbar-nav navbar-right">
+		<div class="navbar-collapse collapse" id="navigation">
+			<ul class="nav navbar-nav navbar-left">
 				<li>
 					<a class="{% if page.url == '/' %}is-active{% endif %}" href="{{ site.baseurl }}/">Home</a>
 				</li>
 				<li>
-					<a class="{% if page.url == '/over-menneske.html' %}is-active{% endif %}" href="{{ site.baseurl }}over-menneske.html">Over menneske</a>
+					<a class="{% if page.url == '/stichting-huisvesting-middengroep/' %}is-active{% endif %}" href="{{ site.baseurl }}/stichting-huisvesting-middengroep/">Stichting huisvesting middengroep</a>
 				</li>
 				<li>
-					<a class="{% if page.url == '/werk.html' %}is-active{% endif %}" href="{{ site.baseurl }}werk.html">Werk</a>
+					<a class="{% if page.url == '/woonfonds/' %}is-active{% endif %}" href="{{ site.baseurl }}/woonfonds/">Woonfonds</a>
 				</li>
 				<li>
-					<a class="{% if page.url == '/contact.html' %}is-active{% endif %}" href="{{ site.baseurl }}contact.html">Contact</a>
+					<a class="{% if page.url == '/koopgarantfonds/' %}is-active{% endif %}" href="{{ site.baseurl }}/koopgarantfonds/">Koopgarantfonds</a>
 				</li>
-				<li class="menneske-nav-socmed-btn">
-					<a href="https://www.facebook.com/menneske.nl/" target="_blank">
-						<i class="fa fa-facebook"></i>
-					</a>
+				<li>
+					<a class="{% if page.url == '/onze-mensen/' %}is-active{% endif %}" href="{{ site.baseurl }}/onze-mensen/">Onze mensen</a>
 				</li>
-				<li class="menneske-nav-socmed-btn">
-					<a href="https://twitter.com/evelinesissing?lang=nl" target="_blank">
-						<i class="fa fa-twitter"></i>
-					</a>
-				</li>
-				<li class="menneske-nav-socmed-btn">
-					<a href="https://nl.linkedin.com/in/evelinesissing/nl" target="_blank">
-						<i class="fa fa-linkedin"></i>
-					</a>
+				<li>
+					<a class="{% if page.url == '/contact/' %}is-active{% endif %}" href="{{ site.baseurl }}/contact/">Contact</a>
 				</li>
 			</ul>
 		</div><!-- /.navbar-collapse -->
-	</div><!-- /.container-fluid -->
+
+		<div class="navbar-search clearfix" id="search">
+      <form class="navbar-form" role="search">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="zoeken">
+					<div class="navbar-search-icon">
+						<i class="fa fa-search" aria-hidden="true"></i>
+					</div>
+        </div>
+      </form>
+  	</div>
+
+	</div><!-- /.container -->
 </nav>

@@ -1,48 +1,25 @@
 body {
-	font-family: "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif !important;
+	height: 100%;
 	color: $text-color;
-	font-size: 14px;
-	font-weight: 300 !important;
-	background-color: $white;
-}
-@media (min-width: $screen-sm-min) {
-	body {
-		font-size: 15px;
-	}
-}
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
+	font-size: 16px;
 	font-weight: 300;
-	text-transform: lowercase;
+	background-color: #fff;
+	//background-image: url("../img/vinci-bg.jpg");
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	background-size: 100%;
 }
-h2 {
-	color: $purple;
-	font-size: 30px;
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
+	color: $title-color;
 	font-weight: 400;
-	line-height: normal;
-	letter-spacing: 1px;
-	margin: 0 auto 25px;
-
-	&:before {
-		content: "";
-		position: absolute;
-		width: 40px;
-		height: 3px;
-		left: 50%;
-		bottom: 0;
-		background-color: #d30505;
-		margin-left: -20px;
-		//z-index: -1;
-	}
 }
 
 a {
-	text-decoration: none;
+	color: $yellow;
+	@include transition-duration(.2s);
 
-	&:hover,
-	&:focus,
-	&:active, &.active, &.is-active {
+	&:hover {
+		color: $red;
 		text-decoration: none;
-		outline: none;
 	}
 }

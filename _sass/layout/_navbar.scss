@@ -1,0 +1,99 @@
+.navbar {
+	//min-height: 40px;
+	//height: 40px;
+	color: $white;
+	background-color: $yellow;
+	margin-bottom: 0;
+	border: 0px solid transparent;
+	border-radius: 0;
+
+	.navbar-container {
+		width: 1170px;
+		margin: 0 auto;
+	}
+	.navbar-brand {
+		display: none;
+		float: left;
+	}
+	.navbar-nav {
+		> li > a {
+			position: relative;
+			color: $white;
+			font-size: 16px;
+			font-weight: 400;
+			display: inline-block;
+			vertical-align: middle;
+			background-color: transparent;
+			@include perspective(1px);
+			@include translate3d(0,0,0);
+			box-shadow: 0 0 1px transparent;
+			@include transition-property(color);
+			@include transition-duration(.25s);
+
+			&.is-active {
+				background-color: $orange;
+			}
+
+			&:before {
+			  content: "";
+			  position: absolute;
+			  z-index: -1;
+			  top: 0;
+			  left: 0;
+			  right: 0;
+			  bottom: 0;
+			  background: $orange;
+			  @include scaleY(0);
+				@include transform-origin(50% 0%);
+			  @include transition-property(transform);
+			  @include transition-duration(.25s);
+			  @include transition-timing-function(ease-out);
+			}
+			&:hover, &:focus, &:active {
+			  color: $white;
+				background-color: transparent;
+			}
+			&:hover:before, &:focus:before, &:active:before {
+			  @include scaleY(1);
+			}
+		}
+	}
+	.navbar-collapse {
+		float: left;
+		padding: 0;
+	}
+	.navbar-search {
+		float: right;
+
+		input.form-control {
+			width: 100px;
+			color: $white;
+			font-size: 16px;
+			background-color: $yellow;
+			padding: 5px 34px 5px 5px;
+			border: 0px solid transparent;
+			border-radius: 0;
+			@include placeholder($white);
+			@include transition(all .2s ease);
+		}
+		input.form-control:hover,
+		input.form-control:focus {
+    	width: 200px;
+			background-color: $orange;
+			@include placeholder($light-yellow);
+		}
+		.navbar-search-icon {
+			position: absolute;
+			top: 0;
+			right: 0;
+			z-index: 100;
+
+			.fa {
+				font-size: 1em;
+				padding: 5px 9px;
+				margin: 4px 0;
+				border-left: 1px solid $white;
+			}
+		}
+	}
+}

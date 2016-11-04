@@ -22,7 +22,7 @@
   });*/
 
   // Offset for Main Navigation
-  $('#mainNav').affix({
+  /*$('#mainNav').affix({
     offset: {
       top: 1
     }
@@ -59,7 +59,7 @@
 })(jQuery); // End of use strict
 
 $( document ).ready(function() {
-  /* activate jquery isotope */
+  /* activate jquery isotope 
   var $container = $('#posts').isotope({
     itemSelector : '.menneske-thumbnail',
     isFitWidth: true

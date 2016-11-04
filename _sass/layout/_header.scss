@@ -1,26 +1,72 @@
-.menneske-header {
-	background-color: $purple;
-	@include transition(margin .2s ease);
+.header {
+	background-image: url("../img/vinci-header-bg.jpg");
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size: cover;
 
-	&.affix-top {
-		position: static;
-		margin-top: 160px;
-	}
-	&.affix {
-		position: static !important;
-		margin-top: 65px;
-	}
+	.header-container {
+		display: block;
+		width: $container-large-desktop;
+		margin: 0 auto;
+		@include clearfix();
 
-	.menneske-header-title {
-		height: 120px;
-		color: $white;
-		padding: 0;
+		.header-container-logo,
+		.header-container-sublogos {
+			position: relative;
+			display: block;
+			float: left;
+			width: 30%;
+			min-height: 1px;
 
-		h1 {
-			font-size: 36px;
-			font-weight: 400;
-    	line-height: normal;
-			margin: 38px auto;
+			.header-logo {
+				float: left;
+				width: 130px;
+				height: 100px;
+				margin: 20px 0;
+			}
 		}
+		.header-container-sublogos {
+			width: 70%;
+
+			.header-sublogos {
+				float: right;
+				list-style-type: none;
+				margin-bottom: 0;
+
+				> li {
+					float: left;
+					margin: 42px 20px 41px 0;
+
+					&:last-child {
+						margin-right: 0;
+					}
+
+					a {
+						> .header-stichting-logo {
+							width: 140px;
+							height: 57px;
+						}
+						> .header-woonfonds-logo {
+							width: 200px;
+							height: 57px;
+						}
+						> .header-koopgarantfonds-logo {
+							width: 250px;
+							height: 57px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+
+
+	.header-border {
+		height: 5px;
+		background-color: rgba(241,141,43,.6);
+		margin-left: -15px;
+		margin-right: -15px;
 	}
 }

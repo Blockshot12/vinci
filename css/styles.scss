@@ -1,13 +1,20 @@
 ---
 ---
 
-@import "vendors/bootstrap";
+// Variables
 @import "vendors/bootstrap/variables";
-@import "vendors/slick/slick";
-@import "vendors/slick/slick-theme";
+@import "theme/theme-vinci";
+@import "tools/site-settings";
 
-// Theme
-@import "theme/theme-menneske";
+// Tools
+@import "tools/mixins";
+@import "tools/hacks";
+
+// Vendors
+@import "vendors/bootstrap-vinci";
+//@import "vendors/hover";
+//@import "vendors/slick/slick";
+//@import "vendors/slick/slick-theme";
 
 // Base
 @import "base/form";
@@ -15,20 +22,14 @@
 @import "base/grid";
 
 // Layout
-@import "layout/nav";
+@import "layout/navbar";
 @import "layout/header";
-@import "layout/slider";
 @import "layout/main";
 @import "layout/footer";
 @import "layout/shiftnav";
 
 // Modules
-@import "modules/thumbnail";
-@import "modules/buttons";
-@import "modules/flipbox";
-@import "modules/testimonials";
-
-// Tools
-@import "tools/mixins";
-
-//@import "menneske";
+//@import "modules/thumbnail";
+//@import "modules/buttons";
+//@import "modules/flipbox";
+//@import "modules/testimonials";

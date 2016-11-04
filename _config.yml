@@ -27,8 +27,10 @@ exclude: ['about.md','help']
 # Build settings
 markdown: kramdown
 
-sass:
-  style: compressed
+# sass:
+#  style: compressed
+
+permalink: pretty
 
 # Server Config options
-livereload: false
+livereload: true

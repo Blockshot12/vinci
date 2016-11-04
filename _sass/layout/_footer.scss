@@ -1,67 +1,13 @@
-.menneske-footer {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #fff;
-  background-color: #58205a;
+.footer {
+	color: $yellow;
+	background-color: $white;
+	border-top: 5px solid $yellow;
 
-  .menneske-footer-features {
-    padding: 12px 15px 0px;
+	.footer-copyright {
+		margin: 15px 0;
 
-    .menneske-footer-logo {
-      width: 191px;
-      height: 50px;
-      background-image: url("../img/logo/menneske-footer-logo.png");
-      background-repeat: no-repeat;
-      background-size: 191px 50px;
-    }
-
-    .menneske-footer-socmed {
-      text-align: right;
-
-      .menneske-footer-socmed-btn {
-        display: inline-block;
-        width: 44px;
-        height: 44px;
-        text-align: center;
-        margin: 0 6px;
-        padding-top: 11px;
-        transition: all 0.15s ease-in-out 0s;
-        border: 2px solid #fff;
-        border-radius: 22px;
-
-        .fa {
-          color: #fff;
-          font-size: 18px;
-          transition: all 0.15s ease-in-out 0s;
-        }
-
-        &:hover {
-          border-color: #d30505;
-
-          .fa {
-            color: #d30505;
-            font-size: 18px;
-          }
-        }
-      }
-    }
-  }
-
-  .menneske-footer-copyright {
-    font-family: inherit;
-    color: #fff;
-    font-size: 12px;
-    text-align: center;
-    text-transform: uppercase;
-    line-height: normal;
-    padding: 2px 15px 8px;
-    margin-bottom: 0;
-    a {
-      color: #d30505;
-
-      &:hover {
-        color: #ff3333;
-        text-decoration: none;
-      }
-    }
-  }
+		a {
+			color: $orange;
+		}
+	}
 }

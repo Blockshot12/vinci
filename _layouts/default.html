@@ -1,25 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="nl">
 	<head>
-		<title>{{page.title}}menneske - communicatie en processen</title>
+		<title>{{page.pagetitle}}</title>
 
-		{% include head.html %}
+		<!--{% include head.html %}-->
 
 		{% include styles.html %}
 	</head>
-	<body class="page-template page-template-100-width page-template-100-width-php fusion-body no-tablet-sticky-header no-mobile-sticky-header no-mobile-slidingbar no-totop no-mobile-totop mobile-logo-pos-left layout-wide-mode menu-text-align-center mobile-menu-design-modern fusion-image-hovers fusion-show-pagination-text do-animate shiftnav-enabled shiftnav-lock">
-		<div id="shiftnav-toggle-main-button" class="shiftnav-toggle shiftnav-toggle-shiftnav-main shiftnav-toggle-burger" data-shiftnav-target="shiftnav-main">
-			<i class="fa fa-bars"></i>
-		</div>
+	<body>
 		<div id="wrapper">
+
 			{% include navbar.html %}
+
+			{% include header.html %}
 
 			{{content}}
 
 			{% include footer.html %}
 		</div>
-
-		{% include shiftnav.html %}
 
 		{% include js.html %}
 	</body>
