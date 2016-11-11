@@ -1,13 +1,16 @@
 <header class="main-header container-fluid">
 	<div class="container main-header-container">
 		<div class="row">
-			<div class="col-sm-12">
-				<div class="main-header-breadcrumb">
-					{% include breadcrumbs.html %}
-				</div>
-				<h1 class="page-title">
+			<div class="col-sm-7 main-header-title">
+				{% include breadcrumbs.html %}
+				<h1>
 					{{page.title}}
 				</h1>
+			</div>
+			<div class="col-sm-4 main-header-subtitle">
+				<p>
+					{{ page.subtitle }}
+				</p>
 			</div>
 		</div>
 	</div>

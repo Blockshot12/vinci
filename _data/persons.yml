@@ -1,6 +1,17 @@
+- name: Floris Ledder
+  photo: /img/floris-ledder.jpg
+  phone: 06-12345678
+  text:
+    - item: "Havensteder: portefeuillemanagement, waardesturing, dispositie"
+    - item: "Elkien en Woonconcept: kwartiermaker assetmanagement"
+    - item: "WIF: herfinancieringsvoorstel"
+    - item: "Specialisatie: financiering, asset management"
+  linkedin: https://nl.linkedin.com/in/floris-ledder-a49b6a4/nl
+  mailto: floris.ledder@vinci.fund
+
 - name: Maarten Kusters
   photo: /img/maarten-kusters.jpg
-  phone: 06-12345678
+  phone: 06-52014452
   text:
     - item: "Portaal, Parteon, Zayaz, Woonstad R’dam: Interim-manager vastgoed"
     - item: "AM / Wilmavastgoed: assetmanager"
@@ -8,3 +19,24 @@
     - item: "Specialisatie: management van vastgoed, samenwerkingsvormen, business development"
   linkedin: https://nl.linkedin.com/in/maarten-kusters-641824b/nl
   mailto: maarten.kusters@vinci.fund
+
+- name: Peter Ebbelinghaus
+  photo: /img/peter-ebbelinghaus.jpg
+  phone: 06-12345678
+  text:
+    - item: "Ymere, directeur asset management"
+    - item: "Ahold, directeur real estate"
+    - item: "ING Real Estate, treasurer"
+    - item: "Specialisatie: treasury, taxaties, asset management"
+  linkedin: https://nl.linkedin.com/in/peter-ebbelinghaus-562a98b/nl
+  mailto: peter.ebbelinghaus@vinci.fund
+
+- name: Ronald Bruin
+  photo: /img/ronald-bruin.jpg
+  phone: 06-21577206
+  text:
+    - item: "Boer & Croon, verantwoordelijk voor Publiek Domein (incl. corporaties)"
+    - item: "WIF: herfinancieringsvoorstel"
+    - item: "Specialisatie: business development en matching"
+  linkedin: http://nl.linkedin.com/pub/ronald-bruin/5/549/263/nl
+  mailto: ronald.bruin@vinci.fund

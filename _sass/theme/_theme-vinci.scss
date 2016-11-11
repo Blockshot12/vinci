@@ -13,3 +13,14 @@ $dark-grey: #555;
 
 $text-color: $grey-blue;
 $title-color: $dark-grey;
+
+//== Buttons
+//
+//## For each of Bootstrap's buttons, define text, background and border color.
+$btn-yellow-color:						$yellow !default;
+$btn-yellow-bg:               $white !default;
+$btn-yellow-border:           $yellow !default;
+
+$btn-red-color:            $white !default;
+$btn-red-bg:               $red !default;
+$btn-red-border:           $red !default;

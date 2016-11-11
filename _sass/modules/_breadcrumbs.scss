@@ -1,0 +1,17 @@
+.breadcrumbs {
+	display: block;
+	color: rgba(255,255,255,.5);
+	font-size: 14px;
+	font-weight: 400;
+	margin-top: 25px;
+
+	a {
+		color: $white;
+		text-decoration: none;
+
+		&:hover {
+			color: $orange;
+			text-decoration: underline;
+		}
+	}
+}

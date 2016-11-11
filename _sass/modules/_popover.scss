@@ -1,0 +1,63 @@
+.popover-btn {
+  cursor: default;
+  display: inline-block;
+  position: relative;
+
+  .popover {
+    position: absolute;
+    display: none;
+    height: 30px;
+    width: auto;
+    left: -10px;
+    bottom: 0px;
+    color: $text-color;
+    padding: 7px 10px;
+    border-radius: 0;
+
+    &:before {
+      border-top: 7px solid rgba(0,0,0,0.85);
+      border-right: 7px solid transparent;
+      border-left: 7px solid transparent;
+      bottom: -7px;
+      content: '';
+      display: block;
+      left: 50%;
+      margin-left: -7px;
+      position: absolute;
+    }
+  }
+
+  &:hover {
+    .popover {
+      display: block;
+      -webkit-animation: fade-in .3s linear 1, move-up .3s linear 1;
+      -moz-animation: fade-in .3s linear 1, move-up .3s linear 1;
+      -ms-animation: fade-in .3s linear 1, move-up .3s linear 1;
+    }
+  }
+}
+
+@-webkit-keyframes fade-in {
+	from   { opacity: 0; }
+	to { opacity: 1; }
+}
+@-moz-keyframes fade-in {
+	from   { opacity: 0; }
+	to { opacity: 1; }
+}
+@-ms-keyframes fade-in {
+	from   { opacity: 0; }
+	to { opacity: 1; }
+}
+@-webkit-keyframes move-up {
+	from   { bottom: 30px; }
+	to { bottom: 42px; }
+}
+@-moz-keyframes move-up {
+	from   { bottom: 30px; }
+	to { bottom: 42px; }
+}
+@-ms-keyframes move-up {
+	from   { bottom: 30px; }
+	to { bottom: 42px; }
+}

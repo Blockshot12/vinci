@@ -2,6 +2,8 @@
 layout: default
 pagetitle:  "Onze mensen bij Vinci"
 title: "Onze mensen"
+subtitle: "Resultaatgerichte, ondernemende vastgoedprofessionals vanuit de sector, onafhankelijk opererend:"
+meta: ""
 priority: 1.0
 ---
 
@@ -10,46 +12,30 @@ priority: 1.0
 	{% include main-header.html %}
 
 	<section class="container main-container">
-
 		<div class="row">
-			<article class="col-sm-10 col-sm-offset-1 main-persons-id">
-				<div class="main-persons-photo">
-					<img class="img-responsive" src="{{ site.baseurl }}/img/maarten-kusters.jpg" alt="Maarten Kusters van Vinci" />
-
-					<!--<ul class="main-persons-socmed">
-						<li><a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a></li>
-						<li><a href="#"><i class="fa fa-envelope-square fa-2x" aria-hidden="true"></i></a></li>
-					</ul>-->
-				</div>
-				<div class="main-persons-text">
-					<h2 class="main-persons-name">
-						Maarten Kusters
-					</h2>
-
-					<a href="#" class="main-persons-phone-btn"><i class="fa fa-phone"></i> 06-12345678</a>
-
-					<ul>
-						<li>Portaal, Parteon, Zayaz, Woonstad R’dam: Interim-manager vastgoed</li>
-						<li>AM / Wilmavastgoed: assetmanager</li>
-						<li>BPF Bouwinvest; manager product- en marktontwikkeling</li>
-						<li>Specialisatie: management van vastgoed, samenwerkingsvormen, business development</li>
-					</ul>
-
-				</div>
-			</article>
 
 				{% for persons in site.data.persons %}
-					<article class="col-sm-10 col-sm-offset-1 main-persons-id">
-						{% if persons.photo %}
-							<div class="main-persons-photo">
-								<img class="img-responsive" src="{{ site.baseurl }}{{persons.photo}}" alt="Maarten Kusters van Vinci" />
+					<article class="col-sm-6 main-persons-id">
+						<div class="main-persons-photo">
+							<img class="img-responsive" src="{{ site.baseurl }}{{ persons.photo }}" alt="Maarten Kusters van Vinci" />
+							<div class="main-persons-socmed">
+								{% if persons.phone %}
+									<a href="tel:{{ persons.phone }}" class="popover-btn">
+										<i class="fa fa-mobile-phone"></i><span class="popover above">{{ persons.phone }}</span>
+									</a>
+								{% endif %}
+								{% if persons.mailto %}
+									<a href="mailto:{{ persons.mailto }}"><i class="fa fa-envelope"></i></a>
+								{% endif %}
+								{% if persons.linkedin %}
+									<a href="{{ persons.linkedin }}"><i class="fa fa-linkedin"></i></a>
+								{% endif %}
 							</div>
-						{% endif %}
+						</div>
 						<div class="main-persons-text">
 							<h2 class="main-persons-name">{{persons.name}}</h2>
-							<a href="{{ site.baseurl }}/"><i class="fa fa-phone"></i> {{persons.phone}}</a>
 							{% if persons.text %}
-								<ul>
+								<ul class="main-persons-list">
 									{% for text in persons.text %}
 										<li>
 											{{text.item}}

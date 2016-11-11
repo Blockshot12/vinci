@@ -3,80 +3,172 @@
 	background-position: center bottom;
 	background-repeat: no-repeat;
 	background-size: contain;
-	padding-bottom: 300px;
+	padding-bottom: 240px;
 
 	.main-header {
+		height: 113px;
 		background-color: $yellow;
 		@include gradient-horizontal-three-colors($dark-yellow, $yellow, 25%, $yellow);
 		border-bottom: 5px solid $light-yellow;
 
-		.main-header-breadcrumb {
-			display: block;
-			color: rgba(255,255,255,.5);
-			font-size: 14px;
-			font-weight: 400;
-			margin-top: 25px;
-
-			a {
+		.main-header-title {
+			h1 {
+				display: inline-block;
 				color: $white;
-				text-decoration: none;
-
-				&:hover {
-					color: $orange;
-					text-decoration: underline;
-				}
+				margin: 0 0 -5px;
+				padding: 0 0 25px;
+				border-bottom: 5px solid $orange;
+				box-sizing: border-box;
 			}
 		}
+		.main-header-subtitle {
+			height: 108px;
+			padding: 16px 0 16px 62px;
 
-		h1 {
-			display: inline-block;
-			color: $white;
-			margin: 0 0 -5px;
-			padding: 0 0 25px;
-			border-bottom: 5px solid $orange;
-			box-sizing: border-box;
+			p {
+				color: $white;
+				font-size: 18px;
+				font-style: italic;
+				font-weight: 400;
+			}
 		}
 	}
 	.main-container {
-		padding-top: 15px;
+		padding-top: 40px;
 	}
-}
-.main-persons {
-	.main-persons-id {
-		padding: 15px 0px;
-		//margin: 0 15px;
-		border-bottom: 2px solid #e5e5e5;
 
-		.main-persons-socmed {
+	&.main-homepage {
+		background-image: none;
+		padding-bottom: 0px;
 
+		.main-homepage-first {
+			color: $white;
+			font-size: 24px;
+			font-weight: 300;
+			text-align: center;
+			background-color: $yellow;
+			@include gradient-horizontal-three-colors($dark-yellow, $yellow, 25%, $yellow);
+			padding-top: 40px;
+			padding-bottom: 40px;
+			border-bottom: 5px solid $light-yellow;
 		}
-		.main-persons-photo {
-			position: relative;
-			display: block;
-			float: left;
-			width: 25%;
-			text-align: right;
 
-			img {
-				outline: 10px solid rgba(231,231,231,.4);
-  			outline-offset: -10px;
+		.main-homepage-second {
+			background-color: $white;
+			padding-top: 40px;
+			padding-bottom: 40px;
+
+			.main-homepage-funds-left {
+				min-height: 300px;
+				padding-bottom: 15px;
+				//border-right: 5px solid $dark-white;
+
+				.main-homepage-funds-logo {
+					width: 182px;
+					height: 70px;
+					margin-bottom: 15px;
+				}
+			}
+
+			.main-homepage-funds-middle {
+				min-height: 300px;
+				padding-bottom: 15px;
+				//border-right: 5px solid $dark-white;
+
+				.main-homepage-funds-logo {
+					width: 242px;
+					height: 70px;
+					margin-bottom: 15px;
+				}
+			}
+			.main-homepage-funds-right {
+				min-height: 300px;
+				padding-bottom: 15px;
+
+				.main-homepage-funds-logo {
+					width: 314px;
+					height: 70px;
+					margin-bottom: 15px;
+				}
 			}
 		}
-		.main-persons-text {
-			position: relative;
-			display: block;
-			float: left;
-			width: 75%;
-			padding: 0 15px;
+	}
 
-			.main-persons-name {
-				margin: 0;
-			}
-			ul {
-				list-style-type: none;
-				margin: 0;
+	&.main-persons {
+		.main-persons-id {
+			height: 240px;
+			padding: 0 0 40px;
+
+			&:nth-last-child(-n+2) {
 				padding: 0;
 			}
+
+			.main-persons-photo {
+				position: relative;
+				display: block;
+				float: left;
+				width: 25%;
+				text-align: center;
+				padding: 0 15px;
+
+				img {
+					outline: 5px solid rgba(255,255,255,.6);
+	    		outline-offset: -5px;
+				}
+
+				.main-persons-socmed {
+					margin-top: 10px;
+
+					a {
+						margin: 0 4px;
+
+						.fa {
+							font-size: 20px;
+
+							&.fa-mobile-phone {
+								font-size: 22px;
+								@include translate(0px, 1px);
+							}
+						}
+					}
+				}
+			}
+			.main-persons-text {
+				position: relative;
+				display: block;
+				float: left;
+				width: 75%;
+				padding: 0 15px;
+
+				&:before {
+					position: absolute;
+					content: "";
+					width: 40px;
+					height: 4px;
+					top: 0;
+					background-color: $text-color;
+				}
+
+				.main-persons-name {
+					margin: 20px 0;
+				}
+				ul {
+					list-style-type: none;
+					margin: 0;
+					padding: 0;
+				}
+			}
+		}
+	}
+
+	&.main-contact {
+		.main-contact-gmap {
+			#map {
+				min-height: 550px;
+			}
+		}
+		.main-contact-title {
+			margin-top: 0;
 		}
 	}
 }
