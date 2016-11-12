@@ -1,6 +1,6 @@
 .header {
 	background-image: url("../img/vinci-header-bg.jpg");
-	background-position: center top;
+	background-position: center bottom;
 	background-repeat: no-repeat;
 	background-size: cover;
 
@@ -10,23 +10,30 @@
 		margin: 0 auto;
 		@include clearfix();
 
-		.header-container-logo,
-		.header-container-sublogos {
+		.header-container-logo-stichting,
+		.header-container-logo-fonds {
 			position: relative;
 			display: block;
 			float: left;
-			width: 30%;
+			width: 50%;
 			min-height: 1px;
 
 			.header-logo {
 				float: left;
-				width: 130px;
 				height: 100px;
-				margin: 20px 0;
+				margin: 36px 0 44px;
+			}
+			.header-logo-stichting {
+				width: 255px;
+			}
+			.header-logo-fonds {
+				float: right;
+				width: 326px;
+				margin-right: 160px;
 			}
 		}
-		.header-container-sublogos {
-			width: 70%;
+		.header-container-logo {
+			text-align: right;
 
 			.header-sublogos {
 				float: right;
