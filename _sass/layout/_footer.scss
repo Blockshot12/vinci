@@ -1,14 +1,14 @@
 .footer {
-	color: $yellow;
-	background-color: $white;
-	border-top: 5px solid $yellow;
+	color: $dark-white;
+	background-color: $red-purple;
+	@include gradient-horizontal-three-colors($light-purple, $red-purple, 40%, $red);
 
 	.footer-copyright {
 		font-weight: 400;
 		margin: 15px 0;
 
 		a {
-			color: $orange;
+			color: $yellow;
 		}
 	}
 }

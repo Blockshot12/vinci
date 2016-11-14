@@ -3,7 +3,7 @@
 	<head>
 		<title>{{page.pagetitle}}</title>
 
-		<!--{% include head.html %}-->
+		{% include head.html %}
 
 		{% include styles.html %}
 	</head>
@@ -14,11 +14,15 @@
 
 			{% include header.html %}
 
-			{{content}}
+			{% include main.html %}
 
 			{% include footer.html %}
 		</div>
 
 		{% include js.html %}
+
+		{% if page.url == '/contact/' %}
+			{% include gmap.js.html %}
+		{% endif %}
 	</body>
 </html>
