@@ -118,70 +118,71 @@
 
 		.main-homepage-second {
 			background-color: $white;
-			padding-top: 40px;
-			padding-bottom: 40px;
+			padding-top: 0px;
+			padding-bottom: 0px;
 
-			.main-homepage-funds-left {
-				min-height: 300px;
-				padding-bottom: 15px;
-				//border-right: 5px solid $dark-white;
+			.col-sm-4 {
+				padding-bottom: 30px;
 
 				.main-homepage-funds-logo {
 					display: block;
-					width: 200px;
 					height: 75px;
 					margin-bottom: 15px;
 					background-image: url("../img/vinci-icons.png");
-					background-position: top left;
 					background-repeat: no-repeat;
 					background-size: 250px 271px;
+				}
+			}
+			.main-homepage-funds-left {
+				.main-homepage-funds-logo {
+					width: 200px;
+					background-position: top left;
 				}
 			}
 
 			.main-homepage-funds-middle {
-				min-height: 300px;
-				padding-bottom: 15px;
-				//border-right: 5px solid $dark-white;
-
 				.main-homepage-funds-logo {
-					display: block;
 					width: 250px;
-					height: 75px;
-					margin-bottom: 15px;
-					background-image: url("../img/vinci-icons.png");
 					background-position: 0px -75px;
-					background-repeat: no-repeat;
-					background-size: 250px 271px;
 				}
 			}
 			.main-homepage-funds-right {
-				min-height: 300px;
-				padding-bottom: 15px;
-
 				.main-homepage-funds-logo {
-					display: block;
 					width: 250px;
-					height: 75px;
-					margin-bottom: 15px;
-					background-image: url("../img/vinci-icons.png");
 					background-position: 0px -150px;
-					background-repeat: no-repeat;
-					background-size: 250px 271px;
+				}
+			}
+		}
+		@media (min-width:$screen-sm-min) {
+			.main-homepage-second {
+				padding-top: 40px;
+				padding-bottom: 40px;
+
+				.col-sm-4 {
+					min-height: 300px;
+					padding-bottom: 15px;
 				}
 			}
 		}
 
 		.main-homepage-third {
 			background-color: $white;
+			padding-bottom: 0px;
+
+			@media (max-width:560px) {
+				.col-xs-6 {
+					width: 100%;
+				}
+			}
 
 			.bg-white {
+				max-width: 340px;
 				height: inherit;
+				font-size: inherit;
+				letter-spacing: inherit;
 				background-color: $white;
 				padding: 10px 0;
 
-				img {
-					//max-width: 340px;
-				}
 				h3 {
 					margin-top: 0;
 				}
@@ -191,10 +192,22 @@
 				}
 			}
 		}
-		@media (min-width:540px) {
+		@media (min-width:560px) {
 			.main-homepage-third {
+				padding-bottom: 40px;
+				
 				.col-sm-6 {
-					width: 50%;
+					&:nth-child(odd) {
+						padding-right: 8px;
+					}
+					&:nth-child(even) {
+						padding-left: 7px;
+					}
+				}
+				.bg-white {
+					max-width: none;
+					font-size: 13px;
+					letter-spacing: .5px;
 				}
 			}
 		}
@@ -215,11 +228,13 @@
 				}
 
 				.bg-white {
-					padding: 10px;
+					font-size: inherit;
+					letter-spacing: inherit;
+					padding: 10px 15px;
 
 					img {
-						float: right;
 						max-height: 400px;
+						margin: 0 auto;
 					}
 					h3 {
 						margin-top: 0;
@@ -239,13 +254,24 @@
 				padding-bottom: 50px;
 
 				.col-sm-6 {
-					height: 478px;
+					height: 430px;
 					padding-left: 15px;
 					padding-right: 15px;
+
+					&:nth-child(odd) {
+						padding-right: 15px;
+					}
+					&:nth-child(even) {
+						padding-left: 15px;
+					}
 				}
 
 				.bg-white {
 					padding: 15px;
+
+					img {
+						margin: 0 auto;
+					}
 				}
 			}
 		}
