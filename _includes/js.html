@@ -4,6 +4,10 @@
 
 <script src="{{ site.baseurl }}/js/vendors/jquery.min.js"></script>
 <script src="{{ site.baseurl }}/js/vendors/bootstrap.min.js"></script>
-<script src="{{ site.baseurl }}/js/vendors/tweenmax.min.js"></script>
+<!--<script src="{{ site.baseurl }}/js/vendors/tweenmax.min.js"></script>-->
 
 <!--<script src="{{ site.baseurl }}/js/scripts.js"></script>-->
+
+{% if page.url == '/contact/' %}
+	{% include gmap.js.html %}
+{% endif %}

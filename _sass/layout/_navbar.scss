@@ -8,53 +8,75 @@
 	border-radius: 0;
 
 	.navbar-container {
-		width: 1170px;
+		width: 100%;
 		margin: 0 auto;
+	}
+
+	@media (min-width:$screen-sm-min) {
+		.navbar-container {
+			width: $container-sm;
+		}
+	}
+	@media (min-width:$screen-md-min) {
+		.navbar-container {
+			width: $container-md;
+		}
+	}
+	@media (min-width:$screen-lg-min) {
+		.navbar-container {
+			width: $container-lg;
+		}
 	}
 	.navbar-brand {
 		display: none;
 		float: left;
 	}
 	.navbar-nav {
-		> li > a {
-			position: relative;
-			color: $white;
-			font-size: 16px;
-			font-weight: 400;
-			display: inline-block;
-			vertical-align: middle;
-			background-color: transparent;
-			@include perspective(1px);
-			@include translate3d(0,0,0);
-			box-shadow: 0 0 1px transparent;
-			@include transition-property(color);
-			@include transition-duration(.25s);
+		> li {
+			padding: 0;
 
-			&.is-active {
-				background-color: $orange;
-			}
-
-			&:before {
-			  content: "";
-			  position: absolute;
-			  z-index: -1;
-			  top: 0;
-			  left: 0;
-			  right: 0;
-			  bottom: 0;
-			  background: $orange;
-			  @include scaleY(0);
-				@include transform-origin(50% 0%);
-			  @include transition-property(transform);
-			  @include transition-duration(.25s);
-			  @include transition-timing-function(ease-out);
-			}
-			&:hover, &:focus, &:active {
-			  color: $white;
+			> a {
+				position: relative;
+				color: $white;
+				font-size: 16px;
+				font-weight: 400;
+				letter-spacing: normal;
+				line-height: normal;
+				display: inline-block;
+				vertical-align: middle;
 				background-color: transparent;
-			}
-			&:hover:before, &:focus:before, &:active:before {
-			  @include scaleY(1);
+				@include perspective(1px);
+				@include translate3d(0,0,0);
+				box-shadow: 0 0 1px transparent;
+				@include transition-property(color);
+				@include transition-duration(.25s);
+
+				&.is-active {
+					background-color: $orange;
+				}
+
+				&:before {
+				  content: "";
+				  position: absolute;
+				  z-index: -1;
+				  top: 0;
+				  left: 0;
+				  right: 0;
+				  bottom: 0;
+				  background: $orange;
+				  @include scaleY(0);
+					@include transform-origin(50% 0%);
+				  @include transition-property(transform);
+				  @include transition-duration(.25s);
+				  @include transition-timing-function(ease-out);
+				}
+				&:hover, &:focus, &.is-active, &:active {
+				  color: $white;
+					background-color: transparent;
+				}
+				&:hover:before, &:focus:before, &.is-active:before, &:active:before {
+				  @include scaleY(1);
+				}
 			}
 		}
 	}
@@ -80,7 +102,7 @@
 		input.form-control:focus {
     	width: 200px;
 			background-color: $orange;
-			@include placeholder($light-yellow);
+			@include placeholder(lighten($yellow, 15));
 		}
 		.navbar-search-icon {
 			position: absolute;

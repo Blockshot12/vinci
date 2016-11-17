@@ -1,5 +1,5 @@
 .footer {
-	color: $dark-white;
+	color: $white;
 	background-color: $red-purple;
 	@include gradient-horizontal-three-colors($light-purple, $red-purple, 40%, $red);
 
@@ -9,6 +9,19 @@
 
 		a {
 			color: $yellow;
+		}
+	}
+
+	&.yellow {
+		background-color: $yellow;
+		@include gradient-horizontal-three-colors($orange, $yellow, 7%, $bright-yellow);
+
+		a {
+			color: $orange;
+
+			&:hover {
+				color: $red;
+			}
 		}
 	}
 }

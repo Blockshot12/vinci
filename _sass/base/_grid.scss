@@ -6,3 +6,15 @@
      -moz-column-gap: 30px;
           column-gap: 30px;
 }
+
+@media (max-width:$screen-sm) {
+	.container {
+		padding: 0;
+	}
+}
+@media (max-width:$screen-md) {
+	.container {
+		width: 100%;
+		padding: 15px;
+	}
+}

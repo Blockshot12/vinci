@@ -3,15 +3,15 @@
 	color: rgba(255,255,255,.5);
 	font-size: 14px;
 	font-weight: 400;
-	margin-top: 25px;
+	margin: 0;
 
 	a {
 		color: $white;
 		text-decoration: none;
 
 		&:hover {
-			color: $orange;
-			text-decoration: underline;
+			color: $red;
+			//text-decoration: underline;
 		}
 	}
 }

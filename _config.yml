@@ -34,3 +34,14 @@ permalink: pretty
 
 # Server Config options
 livereload: true
+
+# HTML Compress options
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+  endings: all
+  ignore:
+    envs: []
+  blanklines: false
+  profile: true
+  startings: [html, head, body]

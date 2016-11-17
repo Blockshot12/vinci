@@ -1,16 +1,20 @@
 .btn {
   display: inline-block;
-  margin-bottom: 0; // For input.btn
+  color: $btn-default-color;
+  font-size: 1em;
   font-weight: $btn-font-weight;
   text-align: center;
   vertical-align: middle;
+  line-height: inherit;
   touch-action: manipulation;
   cursor: pointer;
+  background-color: transparent;
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
-  border: 1px solid transparent;
   white-space: nowrap;
-  //@include button-size($padding-base-vertical, $padding-base-horizontal, $font-size-base, $line-height-base, $btn-border-radius-base, $btn-border-width-base);
-  //@include user-select(none);
+  padding: $padding-base-vertical $padding-base-horizontal;
+  margin-bottom: 0; // For input.btn
+  border: 3px solid $btn-default-border;
+  @include transition(all .25s ease);
 
   &,
   &:active,
@@ -24,8 +28,10 @@
   &:hover,
   &:focus,
   &.focus {
-    color: $btn-default-color;
+    color: lighten($btn-default-color,45);
     text-decoration: none;
+    background-color: $btn-default-bg;
+    border-color: lighten($btn-default-bg,15);
   }
 
   &:active,
@@ -42,24 +48,28 @@
     @include opacity(.65);
     @include box-shadow(none);
   }
+  &.orange {
+    color: $btn-orange-color;
+    border: 3px solid $btn-orange-border;
 
-  // [converter] extracted a& to a.btn
-}
-
-a.btn {
-  &.disabled,
-  fieldset[disabled] & {
-    pointer-events: none; // Future-proof disabling of clicks on `<a>` elements
+    &:hover,
+    &:focus,
+    &.focus {
+      color: $btn-orange-hover;
+      background-color: $btn-orange-bg;
+      border-color: lighten($btn-orange-border, 15);
+    }
   }
-}
+  &.purple {
+    color: $btn-purple-color;
+    border: 3px solid $btn-purple-border;
 
-
-// Alternate buttons
-// --------------------------------------------------
-
-.btn-default {
-  //@include button-variant($btn-default-color, $btn-default-bg, $btn-default-border);
-}
-.btn-primary {
-  //@include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+    &:hover,
+    &:focus,
+    &.focus {
+      color: $btn-purple-hover;
+      background-color: $btn-purple-bg;
+      border-color: lighten($btn-purple-border, 15);
+    }
+  }
 }

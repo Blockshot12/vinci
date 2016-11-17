@@ -1,28 +1,31 @@
 $white: #fff;
-$dark-white: #eee;
-$light-yellow: #fab36d;
+$bright-yellow: #f7d83d;
 $yellow: #f18d2b;
-$dark-yellow: #f1842b;
-$orange: #db6915; //#e36e18;
+$orange: #db6915;
 $red: #d23d02;
 $red-purple: #962250;
 $light-purple: #6d1875;
 $purple: #581d70;
 $light-blue: #dde2e9;
-$dark-blue: #495f82;
 $grey-blue: #5c6472;
-$dark-grey: #555;
 
 $text-color: $grey-blue;
-$title-color: $dark-grey;
+$title-color: #555;
 
 //== Buttons
 //
 //## For each of Bootstrap's buttons, define text, background and border color.
-$btn-yellow-color:						$yellow !default;
-$btn-yellow-bg:               $white !default;
-$btn-yellow-border:           $yellow !default;
+$btn-default-color:						darken($grey-blue, 10) !default;
+$btn-default-bg:              $grey-blue !default;
+$btn-default-border:          $grey-blue !default;
+$btn-default-hover:						$white !default;
 
-$btn-red-color:            $white !default;
-$btn-red-bg:               $red !default;
-$btn-red-border:           $red !default;
+$btn-orange-color:						$orange !default;
+$btn-orange-bg:               $yellow !default;
+$btn-orange-border:           $btn-orange-bg !default;
+$btn-orange-hover:						$white !default;
+
+$btn-purple-color:            $red-purple !default;
+$btn-purple-bg:               $purple !default;
+$btn-purple-border:           $btn-purple-bg !default;
+$btn-purple-hover:						$white !default;
