@@ -7,14 +7,15 @@
           column-gap: 30px;
 }
 
-@media (max-width:$screen-sm) {
-	.container {
-		padding: 0;
-	}
+.container-fluid {
+	padding: 0px;
+}
+.container {
 }
 @media (min-width:$screen-sm-min) and (max-width:$screen-md) {
 	.container {
-		width: 100%;
-		padding: 15px;
+		width: auto;
+		padding-left: 30px;
+		padding-right: 30px;
 	}
 }

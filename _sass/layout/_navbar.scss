@@ -1,6 +1,4 @@
 .navbar {
-	//min-height: 40px;
-	//height: 40px;
 	color: $white;
 	background-color: $yellow;
 	margin-bottom: 0;
@@ -10,11 +8,20 @@
 	.navbar-container {
 		width: 100%;
 		margin: 0 auto;
+
+		.navbar-header {
+			display: block;
+			float: left;
+		}
 	}
 
 	@media (min-width:$screen-sm-min) {
 		.navbar-container {
 			width: $container-sm;
+
+			.navbar-header {
+				display: none;
+			}
 		}
 	}
 	@media (min-width:$screen-md-min) {
@@ -31,6 +38,31 @@
 		display: none;
 		float: left;
 	}
+	.navbar-toggle {
+		display: inline-block;
+		float: left;
+		background-color: $orange;
+		padding: 16px 18px 15px;
+		margin: 0;
+		border: 0px solid transparent;
+		border-radius: 0;
+		@include transition(all .25s ease);
+
+		> .fa-bars:before {
+			width: 25px;
+			content: '\f0c9';
+		}
+
+		&[aria-expanded="true"] {
+			background-color: #800;
+
+			> .fa-bars:before {
+				width: 25px;
+				content: '\f00d';
+			}
+		}
+	}
+
 	.navbar-nav {
 		> li {
 			padding: 0;
@@ -87,6 +119,10 @@
 	.navbar-search {
 		float: right;
 
+		.navbar-form {
+			padding: 0;
+			margin: 0;
+		}
 		input.form-control {
 			width: 100px;
 			color: $white;
@@ -118,4 +154,44 @@
 			}
 		}
 	}
+
+	@media (min-width:$screen-sm-min) {
+		.navbar-search {
+			float: right;
+
+			input.form-control {
+				width: 100px;
+				color: $white;
+				font-size: 16px;
+				background-color: $yellow;
+				padding: 5px 34px 5px 5px;
+				border: 0px solid transparent;
+				border-radius: 0;
+				@include placeholder($white);
+				@include transition(all .2s ease);
+			}
+			input.form-control:hover,
+			input.form-control:focus {
+	    	width: 200px;
+				background-color: $orange;
+				@include placeholder(lighten($yellow, 15));
+			}
+			.navbar-search-icon {
+				position: absolute;
+				top: 0;
+				right: 0;
+				z-index: 100;
+
+				.fa {
+					font-size: 1em;
+					padding: 5px 9px;
+					margin: 4px 0;
+					border-left: 1px solid $white;
+				}
+			}
+		}
+	}
+}
+@media (min-width:$screen-sm-min) {
+
 }

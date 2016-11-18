@@ -1,19 +1,21 @@
-<header class="header container-fluid {{page.color}}">
+<header class="header {{page.color}}">
 	<section class="container header-container">
-		<div class="header-container-logo-stichting">
-			<a href="{{ site.baseurl }}/">
-				<img class="header-logo header-logo-stichting" src="{{ site.baseurl }}/img/vinci-stichting-logo.png" alt="Vinci logo" />
-			</a>
+		<div class="row">
+			<div class="col-xs-6 header-container-logo-stichting">
+				<a href="{{ site.baseurl }}/">
+					<img class="header-logo header-logo-stichting" src="{{ site.baseurl }}/img/vinci-stichting-logo.png" alt="Vinci logo" />
+				</a>
+			</div>
+			{% if page.url == '/koopgarantfonds/' %}
+				<div class="header-container-logo-fonds">
+					<img class="header-logo header-logo-fonds" src="{{ site.baseurl }}/img/vinci-koopgarantfonds-logo.png" alt="Vinci woningfonds logo" />
+				</div>
+			{% else %}
+				<div class="col-xs-6 header-container-logo-fonds">
+					<img class="header-logo header-logo-fonds" src="{{ site.baseurl }}/img/vinci-woningfonds-logo.png" alt="Vinci woningfonds logo" />
+				</div>
+			{% endif %}
 		</div>
-		{% if page.url == '/koopgarantfonds/' %}
-			<div class="header-container-logo-fonds">
-				<img class="header-logo header-logo-fonds" src="{{ site.baseurl }}/img/vinci-koopgarantfonds-logo.png" alt="Vinci woningfonds logo" />
-			</div>
-		{% else %}
-			<div class="header-container-logo-fonds">
-				<img class="header-logo header-logo-fonds" src="{{ site.baseurl }}/img/vinci-woningfonds-logo.png" alt="Vinci woningfonds logo" />
-			</div>
-		{% endif %}
 	</section>
 	<div class="header-border"></div>
 </header>
