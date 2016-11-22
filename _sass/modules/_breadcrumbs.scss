@@ -1,17 +1,21 @@
 .breadcrumbs {
-	display: block;
-	color: rgba(255,255,255,.5);
-	font-size: 14px;
-	font-weight: 400;
-	margin: 0;
+	display: none;
 
-	a {
-		color: $white;
-		text-decoration: none;
+	@media (min-width:$screen-sm-min) {
+		display: block;
+		color: rgba(255,255,255,.5);
+		font-size: 14px;
+		font-weight: 400;
+		margin: 0;
 
-		&:hover {
-			color: $red;
-			//text-decoration: underline;
+		a {
+			color: $white;
+			text-decoration: none;
+
+			&:hover {
+				color: $red;
+				//text-decoration: underline;
+			}
 		}
 	}
 }
