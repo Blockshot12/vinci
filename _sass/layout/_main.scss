@@ -70,6 +70,18 @@
 		background-image: none;
 		padding-bottom: 0px;
 
+		.main-homepage-title {
+			margin: 0 auto 14px;
+			color: $white;
+			font-size: 32px;
+			letter-spacing: .4px;
+
+			@media (max-width:$screen-xs-min) {
+				font-size: 28px;
+				letter-spacing: normal;
+			}
+		}
+
 		.main-homepage-first {
 			position: relative;
 			text-align: center;
@@ -80,15 +92,14 @@
 
 			p {
 				color: $white;
-				font-size: 24px;
+				font-size: 20px;
 				font-weight: 300;
-				letter-spacing: .4px;
-				line-height: 1.2em;
+				letter-spacing: .5px;
+				line-height: 1.3em;
 				margin: 0;
 
 				@media (max-width:$screen-xs-min) {
-					font-size: 20px;
-					letter-spacing: .2px;
+					letter-spacing: .3px;
 				}
 			}
 
@@ -97,6 +108,11 @@
 			}
 		}
 		@media (min-width:$screen-sm-min) {
+			.main-homepage-title {
+				margin: 0 auto 14px;
+				font-size: 32px;
+				letter-spacing: .7px;
+			}
 			.main-homepage-first {
 				position: relative;
 				text-align: center;
@@ -106,7 +122,7 @@
 				padding-bottom: 60px;
 
 				p {
-					font-size: 24px;
+					font-size: 20px;
 					font-weight: 300;
 					letter-spacing: .7px;
 					line-height: 1.2em;
@@ -128,9 +144,13 @@
 			}
 		}
 		@media (min-width:$screen-md-min) {
+			.main-homepage-title {
+				margin: 0 auto 14px;
+				font-size: 36px;
+			}
 			.main-homepage-first {
 				p {
-					font-size: 28px;
+					font-size: 24px;
 				}
 			}
 		}
