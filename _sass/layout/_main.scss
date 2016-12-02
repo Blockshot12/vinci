@@ -493,8 +493,10 @@
 
 	&.main-contact {
 		.main-contact-gmap {
+
 			#map {
 				min-height: 570px;
+				@include box-shadow(0 0 5px rgba($grey-blue, .5));
 			}
 		}
 		.main-contact-title {
