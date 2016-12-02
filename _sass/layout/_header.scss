@@ -22,13 +22,41 @@
 
 			.header-logo {
 				float: left;
-				width: 344px;
-				height: 110px;
-				margin: 40px 0 40px;
+				width: 250px;
+				height: 80px;
+				margin: 20px 0 30px;
 			}
 			.header-logo-fonds {
 				float: right;
 				margin-right: 60px;
+			}
+			@media (max-width:579px) {
+				width: 100%;
+				@include clearfix;
+
+				.header-logo {
+					float: left;
+					width: 200px;
+					height: 64px;
+					margin: 20px 0 0 40px;
+				}
+				.header-logo-fonds {
+					float: left;
+					margin: 0 0 20px 40px;
+				}
+
+			}
+			@media (min-width:$screen-md-min) {
+				.header-logo {
+					float: left;
+					width: 300px;
+					height: 96px;
+					margin: 30px 0 40px;
+				}
+				.header-logo-fonds {
+					float: right;
+					margin-right: 60px;
+				}
 			}
 		}
 	}
@@ -95,8 +123,27 @@
 				margin: 40px 10px;
 			}
 			.header-homepage-logo-fonds {
-				width: 344px;
-				height: 110px;
+				margin-right: 50px;
+			}
+		}
+	}
+	@media (min-width:$screen-lg-min) {
+		&.header-homepage {
+			height: 460px;
+
+			h1.header-homepage-title {
+				font-size: 42px;
+			}
+			.header-homepage-logo-stichting,
+			.header-homepage-logo-fonds {
+				width: 375px;
+				height: 120px;
+				margin: 40px 0;
+			}
+			.header-homepage-logo-fonds {
+				width: 375px;
+				height: 120px;
+				margin-right: 30px;
 			}
 		}
 	}
