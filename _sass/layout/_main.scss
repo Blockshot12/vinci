@@ -78,7 +78,11 @@
 	}
 
 	&.main-homepage {
-		background-image: none;
+		background-color: $white;
+		background-image: url("../img/vinci-main-bg.jpg");
+		background-position: center bottom;
+		background-repeat: no-repeat;
+		background-size: contain;
 		padding-bottom: 0px;
 
 		.main-homepage-title {
@@ -167,7 +171,6 @@
 		}
 
 		.main-homepage-second {
-			background-color: $white;
 			padding-top: 40px;
 			padding-bottom: 10px;
 
@@ -269,7 +272,6 @@
 		}
 
 		.main-homepage-third {
-			background-color: $white;
 			padding-bottom: 0px;
 
 			.col-xs-6 {
@@ -298,11 +300,6 @@
 		}
 		@media (min-width:$screen-sm-min) {
 			.main-homepage-third {
-				background-color: $yellow;
-				background-image: url("../img/vinci-bg2.jpg");
-				background-position: center bottom;
-				background-repeat: no-repeat;
-				background-size: cover;
 				padding-top: 20px;
 				padding-bottom: 20px;
 
