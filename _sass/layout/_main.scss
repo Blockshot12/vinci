@@ -1,12 +1,12 @@
 .main {
 	position: relative;
-	background-image: url("../img/vinci-main-bg.jpg");
 	background-position: center bottom;
 	background-repeat: no-repeat;
 	background-size: contain;
 	padding-bottom: 250px;
 
 	@media (min-width:$screen-md-min) {
+		background-image: url("../img/vinci-main-bg.jpg");
 		padding-bottom: 400px;
 	}
 	@media (min-width:$screen-lg-min) {
@@ -78,11 +78,6 @@
 	}
 
 	&.main-homepage {
-		background-color: $white;
-		background-image: url("../img/vinci-main-bg.jpg");
-		background-position: center bottom;
-		background-repeat: no-repeat;
-		background-size: contain;
 		padding-bottom: 0px;
 
 		.main-homepage-title {
