@@ -13,7 +13,7 @@ priority: 1.0
 	<div class="row">
 
 		{% for persons in site.data.persons %}
-			<article class="col-sm-12 main-persons-id">
+			<article class="col-xs-12 main-persons-id">
 				<div class="main-persons-photo">
 					<img class="img-responsive" src="{{ site.baseurl }}{{ persons.photo }}" alt="{{persons.name}} van Vinci" />
 				</div>
@@ -22,7 +22,7 @@ priority: 1.0
 					<div class="main-persons-socmed">
 						{% if persons.phone %}
 							<a href="tel:{{ persons.phone }}" class="popover-btn">
-								<i class="fa fa-mobile-phone"></i><span class="popover above">{{ persons.phone }}</span>
+								<i class="fa fa-phone"></i><span class="popover above">{{ persons.phone }}</span>
 							</a>
 						{% endif %}
 						{% if persons.mailto %}

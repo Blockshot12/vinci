@@ -373,9 +373,9 @@
 				position: relative;
 				display: block;
 				float: left;
-				width: 22%;
+				width: 40%;
 				text-align: center;
-				padding: 0 30px 0 0;
+				padding: 0 20px 0 0;
 				border-right: 5px solid $light-blue;
 
 				img {
@@ -387,8 +387,8 @@
 				position: relative;
 				display: block;
 				float: left;
-				width: 78%;
-				padding: 0 0 0 30px;
+				width: 60%;
+				padding: 0 0 0 20px;
 
 
 				.main-persons-name {
@@ -422,22 +422,20 @@
 		@media (min-width:$screen-xs-min) {
 			.main-persons-id {
 				.main-persons-photo {
-					width: 22%;
+					width: 30%;
 				}
 				.main-persons-text {
-					width: 78%;
+					width: 70%;
 				}
 			}
 		}
 		@media (min-width:$screen-sm-min) {
 			.main-persons-id {
 				.main-persons-photo {
-					width: 34%;
-					padding: 0 20px 0 0;
+					width: 27%;
 				}
 				.main-persons-text {
-					width: 66%;
-					padding: 0 0 0 20px;
+					width: 73%;
 
 					.main-persons-name {
 						font-size: 28px;
