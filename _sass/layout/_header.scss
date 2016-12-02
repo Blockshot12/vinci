@@ -49,18 +49,20 @@
 	}
 	&.header-homepage {
 		position: relative;
-		height: 400px;
+		height: 350px;
 		color: $yellow;
 		background-image: url("../img/vinci-bg.jpg");
 		background-position: center bottom;
+
+
 
 		.header-homepage-logo-stichting,
 		.header-homepage-logo-fonds {
 			position: relative;
 			display: block;
 			float: left;
-			width: 344px;
-			height: 110px;
+			width: 300px;
+			height: 96px;
 			margin: 30px 10px;
 		}
 		.header-homepage-logo-fonds {
@@ -72,18 +74,19 @@
 		h1.header-homepage-title {
 			position: relative;
 			display: block;
-			color: $yellow;
+			margin-top: 80px;
+			color: $orange;
 			font-size: 28px;
 			font-weight: 500;
-			text-shadow: 0 0 6px rgba($white, .4);
+			text-shadow: 0 0 36px rgba($white, .9);
 		}
 	}
 	@media (min-width:$screen-sm-min) {
 		&.header-homepage {
-			height: 500px;
+			height: 460px;
 
 			h1.header-homepage-title {
-				font-size: 32px;
+				font-size: 42px;
 			}
 			.header-homepage-logo-stichting,
 			.header-homepage-logo-fonds {
@@ -94,6 +97,19 @@
 			.header-homepage-logo-fonds {
 				width: 344px;
 				height: 110px;
+			}
+		}
+	}
+	@media (max-width:579px) {
+		&.header-homepage {
+			.col-xs-6 {
+				width: 100%;
+				@include clearfix();
+			}
+			.header-homepage-logo-stichting,
+			.header-homepage-logo-fonds {
+				float: left;
+				margin: 20px 0 0 40px;
 			}
 		}
 	}
