@@ -21,7 +21,8 @@
 			width: $container-sm;
 
 			.navbar-header {
-				//display: none;
+				float: right;
+				width: auto;
 			}
 		}
 	}
@@ -41,8 +42,9 @@
 		float: left;
 	}
 	.navbar-buttons {
-		//display: none;
 
+		.navbar-gmap,
+		.navbar-search,
 		.navbar-mail,
 		.navbar-phone {
 			display: block;
@@ -57,134 +59,9 @@
 		.navbar-phone {
 			padding: 16px 14px 16px 18px;
 		}
-
-		.navbar-search {
-			position: relative;
-			display: block;
-			float: right;
-			width: auto;
-			height: 60px;
-			padding: 0;
-			margin: 0;
-			border-left: 1px solid $yellow;
-			@include box-shadow(0 0 0 transparent);
-
-			.navbar-form {
-				position: relative;
-				width: auto;
-				padding: 0;
-				margin: 0;
-				border-width: 0;
-				@include box-shadow(0 0 0 transparent);
-			}
-
-			input.form-control[type="text"] {
-				position: relative;
-				display: inline-block;
-				top: 0;
-  			right: 0;
-				width: 60px;
-				height: 40px;
-				color: $white;
-  			background-color: $red;
-				padding: 10px 0;
-				margin: 10px 0;
-				border: 0 solid transparent;
-				border-radius: 0;
-				z-index: 103;
-				cursor: pointer;
-				@include transition(all .3s ease);
-				@include placeholder(transparent);
-			}
-			input.form-control[type="text"]:focus {
-				width: 200px;
-				border-bottom: 1px solid $white;
-
-				@include animation-name(example);
-				@include animation-duration(.2s);
-				@include animation-delay(4s);
-				@include animation-fill-mode(forwards);
-				@include placeholder(lighten($yellow, 15));
-				z-index: 101;
-			}
-			@keyframes example {
-			  from {width: 200px; z-index: 101;}
-			  to {width: 60px; z-index: 103;}
-			}
-			.navbar-search-btn {
-				position: absolute;
-				display: inline-block;
-				top: 0;
-				right: 0;
-				background-color: $orange;
-				padding: 16px 16px 15px 17px;
-				border: 0px solid transparent;
-				border-radius: 0;
-				z-index: 102;
-			}
+		.navbar-gmap {
+			padding: 16px 12px 16px 20px;
 		}
-		/*
-		.navbar-search {
-			position: relative;
-			display: block;
-			float: right;
-			width: auto;
-			background-color: $orange;
-			padding: 13px;
-			box-shadow:0px 0px 0px transparent;
-			border-left: 1px solid $yellow;
-
-			.navbar-form {
-				padding: 0;
-				margin: 0;
-				border: 0px solid transparent;
-				box-shadow:0px 0px 0px transparent;
-
-				input.form-control {
-					width: 0px;
-					color: $white;
-					font-size: 18px;
-					background-color: transparent;
-					padding: 5px 34px 5px 0px;
-					border: 0px solid transparent;
-					border-radius: 0;
-					@include placeholder($yellow);
-					@include transition(all .2s ease);
-					z-index: 101;
-				}
-				input.form-control:hover,
-				input.form-control:focus {
-		    	width: 200px;
-					border-bottom: 1px solid $white;
-					@include placeholder(lighten($yellow, 15));
-					z-index: 101;
-				}
-				.navbar-search-icon {
-					position: absolute;
-					top: 0;
-					right: 0;
-					z-index: 100;
-
-					.fa {
-						font-size: 1.7em;
-						padding: 1px 5px;
-						margin: 4px 0;
-					}
-				}
-			}
-
-			&:hover {
-				cursor: pointer;
-
-				.navbar-form {
-					.navbar-search-icon {
-						//z-index: 102;
-						cursor: pointer;
-					}
-				}
-			}
-		}
-		*/
 
 		.navbar-toggle {
 			display: inline-block;
@@ -209,6 +86,58 @@
 					width: 24px;
 					content: '\f00d';
 				}
+			}
+		}
+
+		@media (min-width:$screen-sm-min) {
+			.navbar-search {
+				min-width: 50px;
+				height: 50px;
+				padding: 14px 16px 16px;
+				background-color: transparent;
+				@include perspective(1px);
+				@include translate3d(0,0,0);
+				box-shadow: 0 0 1px transparent;
+				@include transition-property(color);
+				@include transition-duration(.25s);
+
+				&.is-active {
+					background-color: $orange;
+				}
+
+				&:before {
+					content: "";
+					position: absolute;
+					z-index: -1;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					background: $orange;
+					@include scaleY(0);
+					@include transform-origin(50% 0%);
+					@include transition-property(transform);
+					@include transition-duration(.25s);
+					@include transition-timing-function(ease-out);
+				}
+				&:hover, &:focus, &.is-active, &:active {
+					color: $white;
+					background-color: transparent;
+				}
+				&:hover:before, &:focus:before, &.is-active:before, &:active:before {
+					@include scaleY(1);
+				}
+
+				.fa-2x {
+					font-size: 20px;
+					line-height: 20px;
+				}
+			}
+			.navbar-mail,
+			.navbar-gmap,
+			.navbar-phone,
+			.navbar-toggle {
+				display: none;
 			}
 		}
 	}
@@ -241,7 +170,6 @@
 					vertical-align: middle;
 					background-color: transparent;
 					padding: 15px 60px;
-					//padding: 15px 60px;
 					@include transition-duration(.25s);
 
 					&.is-active {
@@ -271,7 +199,7 @@
 						font-size: 16px;
 						font-weight: 400;
 						letter-spacing: normal;
-						line-height: normal;
+						line-height: 20px;
 						display: inline-block;
 						vertical-align: middle;
 						background-color: transparent;
