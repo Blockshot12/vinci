@@ -141,6 +141,30 @@
 		}
 	}
 
+	.navbar-dropdown-search {
+		position: absolute;
+		display: none;
+    float: left;
+    top: 100%;
+    left: 0;
+		width: 100%;
+    margin: 0;
+    padding: 5px 0;
+		@include opacity(0);
+		background-clip: padding-box;
+		background-color: $orange;
+		-webkit-box-shadow: 0 0 15px rgba(0,0,0,.25);
+		box-shadow: 0 0 15px rgba(0,0,0,.25);
+    font-size: 14px;
+    list-style: outside none none;
+    text-align: left;
+    z-index: 1000;
+	}
+	.open > .navbar-dropdown-search {
+		display: block;
+		@include opacity(1);
+	}
+
 	.navbar-collapse {
 		float: left;
 		width: 100%;

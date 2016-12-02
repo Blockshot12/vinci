@@ -10,10 +10,22 @@
           <i class="fa fa-bars fa-2x"></i>
         </button>
 
-				<a class="navbar-search" href="#">
+				<a class="navbar-search" href="" id="dLabel" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					<span class="sr-only">Zoeken</span>
 					<i class="fa fa-search fa-2x"></i>
 				</a>
+
+				<div class="navbar-dropdown-search" aria-labelledby="dLabel">
+					<form class="navbar-container form-inline">
+						<div class="form-group">
+					    <label class="sr-only" for="exampleInputAmount">Zoeken</label>
+					    <div class="input-group">
+					      <input type="text" class="form-control" id="exampleInputAmount" placeholder="Zoeken">
+					    </div>
+					  </div>
+					  <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i>Zoeken</button>
+					</form>
+				</div>
 
 				<a class="navbar-gmap" href="#">
           <span class="sr-only">Vinci in Google Maps</span>
