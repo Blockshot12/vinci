@@ -22,15 +22,12 @@
 
 			.header-logo {
 				float: left;
-				height: 100px;
+				width: 344px;
+				height: 110px;
 				margin: 40px 0 40px;
-			}
-			.header-logo-stichting {
-				width: 255px;
 			}
 			.header-logo-fonds {
 				float: right;
-				width: 326px;
 				margin-right: 60px;
 			}
 		}
@@ -62,15 +59,14 @@
 			position: relative;
 			display: block;
 			float: left;
-			width: 204px;
-			height: auto;
+			width: 344px;
+			height: 110px;
 			margin: 30px 10px;
 		}
 		.header-homepage-logo-fonds {
 			position: relative;
 			display: block;
 			float: right;
-			width: 228px;
 		}
 
 		h1.header-homepage-title {
@@ -91,11 +87,13 @@
 			}
 			.header-homepage-logo-stichting,
 			.header-homepage-logo-fonds {
-				width: 255px;
+				width: 344px;
+				height: 110px;
 				margin: 40px 10px;
 			}
 			.header-homepage-logo-fonds {
-				width: 285px;
+				width: 344px;
+				height: 110px;
 			}
 		}
 	}
