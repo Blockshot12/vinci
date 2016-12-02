@@ -72,4 +72,17 @@
       border-color: lighten($btn-purple-border, 15);
     }
   }
+  &.search {
+    color: $btn-search-color;
+    font-size: 1.5em;
+    line-height: 24px;
+    background-color: transparent;
+    border: 3px solid transparent;
+
+    &:hover,
+    &:focus,
+    &.focus {
+      color: $btn-search-hover;
+    }
+  }
 }
