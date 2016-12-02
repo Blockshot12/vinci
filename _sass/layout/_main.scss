@@ -1,13 +1,19 @@
 .main {
 	position: relative;
+	background-image: url("../img/vinci-main-bg.jpg");
 	background-position: center bottom;
 	background-repeat: no-repeat;
 	background-size: contain;
-	padding-bottom: 250px;
+	padding-bottom: 230px;
 
+	@media (min-width:$screen-xs-min) {
+		padding-bottom: 300px;
+	}
+	@media (min-width:$screen-sm-min) {
+		padding-bottom: 340px;
+	}
 	@media (min-width:$screen-md-min) {
-		background-image: url("../img/vinci-main-bg.jpg");
-		padding-bottom: 400px;
+		padding-bottom: 440px;
 	}
 	@media (min-width:$screen-lg-min) {
 		padding-bottom: 500px;
@@ -79,6 +85,10 @@
 
 	&.main-homepage {
 		padding-bottom: 0px;
+
+		@media (max-width:$screen-sm-min) {
+			background-image: none;
+		}
 
 		.main-homepage-title {
 			margin: 0 auto 14px;
@@ -272,6 +282,8 @@
 			.col-xs-6 {
 				padding: 15px;
 				padding-bottom: 30px;
+				background-color: $white;
+
 			}
 
 			@media (max-width:560px) {
@@ -300,7 +312,6 @@
 
 				.col-xs-6 {
 					height: 430px;
-					background-color: $white;
 					padding: 15px;
 
 					img {
