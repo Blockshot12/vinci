@@ -210,6 +210,30 @@
 				}
 			}
 		}
+		@media (max-width: 559px) {
+			.main-homepage-second {
+				.main-homepage-funds-left {
+					text-align: left;
+				}
+				.col-xs-6 {
+					width: 100%;
+				}
+			}
+		}
+		@media (min-width:560px) and (max-width:$screen-xs-max) {
+			.main-homepage-second {
+				.main-homepage-funds-left {
+					text-align: center;
+					.main-homepage-funds-logo {
+						width: 240px;
+						height: 90px;
+						margin: 0 auto 15px;
+						background-position: top left;
+						background-size: 300px 325px;
+					}
+				}
+			}
+		}
 		@media (min-width:$screen-sm-min) {
 			.main-homepage-second {
 				padding-top: 40px;
