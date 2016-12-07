@@ -6,8 +6,19 @@
 <script src="{{ site.baseurl }}/js/vendors/bootstrap.min.js"></script>
 <!--<script src="{{ site.baseurl }}/js/vendors/tweenmax.min.js"></script>-->
 
+<script type="text/javascript" src="{{ site.baseurl }}/js/vendors/tipuesearch/tipuesearch_set.js"></script>
+<script type="text/javascript" src="{{ site.baseurl }}/js/vendors/tipuesearch/tipuesearch_content.js"></script>
+<script type="text/javascript" src="{{ site.baseurl }}/js/vendors/tipuesearch/tipuesearch.js"></script>
 <!--<script src="{{ site.baseurl }}/js/scripts.js"></script>-->
 
 {% if page.url == '/contact/' %}
 	{% include gmap.js.html %}
+{% endif %}
+
+{% if page.url == '/zoekresultaat/' %}
+	<script type="text/javascript">
+		$(document).ready(function() {
+			 $('#tipue_search_input').tipuesearch();
+		});
+	</script>
 {% endif %}

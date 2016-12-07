@@ -2,17 +2,15 @@
 	<section class="container header-container">
 		<div class="row">
 			<div class="col-xs-6 header-container-logo-stichting">
-				<a href="{{ site.baseurl }}/">
-					<img class="header-logo header-logo-stichting" src="{{ site.baseurl }}/img/vinci-logos.svg#stichting" alt="Vinci logo" />
-				</a>
+				<iframe class="header-logo header-logo-stichting" src="{{ site.baseurl }}/img/vinci-logos.svg#stichting" alt="Vinci Stichting Huisvesting Middengroepen logo" frameborder="0"></iframe>
 			</div>
 			{% if page.url == '/koopgarantfonds/' %}
-				<div class="header-container-logo-fonds">
-					<img class="header-logo header-logo-fonds" src="{{ site.baseurl }}/img/vinci-logos.svg#koopgarantfonds" alt="Vinci woningfonds logo" />
+				<div class="col-xs-6 header-container-logo-fonds">
+					<iframe class="header-logo header-logo-fonds" src="{{ site.baseurl }}/img/vinci-logos.svg#koopgarantfonds" alt="Vinci Koopgarantfonds logo" frameborder="0"></iframe>
 				</div>
 			{% else %}
 				<div class="col-xs-6 header-container-logo-fonds">
-					<img class="header-logo header-logo-fonds" src="{{ site.baseurl }}/img/vinci-logos.svg#woningfonds" alt="Vinci woningfonds logo" />
+					<iframe class="header-logo header-logo-fonds" src="{{ site.baseurl }}/img/vinci-logos.svg#woningfonds" alt="Vinci Woningfonds logo" frameborder="0"></iframe>
 				</div>
 			{% endif %}
 		</div>

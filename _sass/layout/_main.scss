@@ -184,29 +184,9 @@
 
 				.main-homepage-funds-logo {
 					display: block;
+					width: 236px;;
 					height: 75px;
 					margin-bottom: 15px;
-					background-image: url("../img/vinci-icons.png");
-					background-repeat: no-repeat;
-					background-size: 250px 271px;
-				}
-			}
-			.main-homepage-funds-left {
-				.main-homepage-funds-logo {
-					width: 200px;
-					background-position: top left;
-				}
-			}
-			.main-homepage-funds-middle {
-				.main-homepage-funds-logo {
-					width: 250px;
-					background-position: 0px -75px;
-				}
-			}
-			.main-homepage-funds-right {
-				.main-homepage-funds-logo {
-					width: 250px;
-					background-position: 0px -150px;
 				}
 			}
 		}
@@ -225,11 +205,10 @@
 				.main-homepage-funds-left {
 					text-align: center;
 					.main-homepage-funds-logo {
-						width: 240px;
-						height: 90px;
+						width: 242px;
+						height: 78px;
 						margin: 0 auto 15px;
-						background-position: top left;
-						background-size: 300px 325px;
+						@include translate(61px, 0);
 					}
 				}
 			}
@@ -244,26 +223,8 @@
 					padding-bottom: 15px;
 
 					.main-homepage-funds-logo {
-						height: 60px;
-						background-size: 200px 216px;
-					}
-				}
-				.main-homepage-funds-left {
-					.main-homepage-funds-logo {
-						width: 160px;
-						background-position: top left;
-					}
-				}
-				.main-homepage-funds-middle {
-					.main-homepage-funds-logo {
-						width: 200px;
-						background-position: 0px -60px;
-					}
-				}
-				.main-homepage-funds-right {
-					.main-homepage-funds-logo {
-						width: 200px;
-						background-position: 0px -120px;
+						width: 220px;
+						height: 70px;
 					}
 				}
 			}
@@ -275,26 +236,8 @@
 					padding-bottom: 15px;
 
 					.main-homepage-funds-logo {
-						height: 75px;
-						background-size: 250px 271px;
-					}
-				}
-				.main-homepage-funds-left {
-					.main-homepage-funds-logo {
-						width: 200px;
-						background-position: top left;
-					}
-				}
-				.main-homepage-funds-middle {
-					.main-homepage-funds-logo {
-						width: 250px;
-						background-position: 0px -75px;
-					}
-				}
-				.main-homepage-funds-right {
-					.main-homepage-funds-logo {
-						width: 250px;
-						background-position: 0px -150px;
+						width: 240px;
+						height: 80px;
 					}
 				}
 			}

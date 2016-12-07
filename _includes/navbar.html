@@ -16,26 +16,26 @@
 				</a>
 
 				<div class="navbar-dropdown-search" aria-labelledby="dLabel">
-					<form class="navbar-container form-inline">
+					<form class="navbar-container form-inline" action="{{ site.baseurl }}/zoekresultaat/">
 						<div class="form-group">
 					    <label class="sr-only" for="">Zoeken</label>
-					    <input type="text" class="form-control" id="" placeholder="Zoeken">
+					    <input type="text" name="q" id="tipue_search_input" class="form-control" autocomplete="off" placeholder="Zoeken" required>
 							<button type="submit" class="btn search"><i class="fa fa-search"></i></button>
 					  </div>
 					</form>
 				</div>
 
-				<a class="navbar-gmap" href="#">
+				<a class="navbar-gmap" href="https://goo.gl/maps/gPWiVqquLzA2" target="_blank">
           <span class="sr-only">Vinci in Google Maps</span>
           <i class="fa fa-map-marker fa-2x"></i>
         </a>
 
-				<a class="navbar-mail" href="#">
+				<a class="navbar-mail" href="mailto:info@vinci.fund">
           <span class="sr-only">Vinci mailen</span>
           <i class="fa fa-envelope fa-2x"></i>
         </a>
 
-				<a class="navbar-phone" href="#">
+				<a class="navbar-phone" href="tel:+31611392394">
           <span class="sr-only">Vinci bellen</span>
           <i class="fa fa-phone fa-2x"></i>
         </a>
