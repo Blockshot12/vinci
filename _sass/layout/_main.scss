@@ -6,6 +6,9 @@
 	background-size: contain;
 	padding-bottom: 230px;
 
+	@media (max-height:64vw) {
+		background-size: cover;
+	}
 	@media (min-width:$screen-xs-min) {
 		padding-bottom: 300px;
 	}
