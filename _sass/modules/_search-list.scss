@@ -1,12 +1,12 @@
-.m-search-list {
+.search-list {
 	padding: 0;
 
-	.m-search-list__item {
+	.search-list__item {
 		margin-bottom: 20px;
 	}
 }
 
-.m-search-list__title {
+.search-list__title {
 	color: $title-color;
 	&:hover {
 		color: $red;
