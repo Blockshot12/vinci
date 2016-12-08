@@ -12,3 +12,16 @@
 		color: $red;
 	}
 }
+
+.search-list__count {
+	margin-top: 8px;
+	color: $title-color;
+	font-size: .9em;
+	font-style: italic;
+}
+
+.search-list__warning {
+	margin-top: 8px;
+	font-size: .9em;
+	font-style: italic;
+}

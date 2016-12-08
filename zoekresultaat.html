@@ -9,8 +9,13 @@ priority: 0.1
 ---
 
 <section class="container main-container">
-	<form action="{{ site.baseurl }}/zoekresultaat/">
-		<input type="text" name="q" id="tipue_search_input" autocomplete="off" required>
-	</form>
+	<div class="row">
+		<div class="col-sm-6">
+			<form class="form-inline search-bar search-bar--grey" action="{{ site.baseurl }}/zoekresultaat/">
+				<input type="text" class="form-control" name="q" id="tipue_search_input" placeholder="Zoeken" autocomplete="off" required>
+				<button type="submit" class="btn search"><i class="fa fa-search"></i></button>
+			</form>
+		</div>
+	</div>
 	<div id="tipue_search_content"></div>
 </section>
