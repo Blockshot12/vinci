@@ -19,8 +19,9 @@
 		font-size: 18px;
 		font-weight: 400;
 
-		&:focus {
+		&:focus, &:active {
 			background-color: $orange;
+			text-decoration: none;
 		}
 	}
 	::-webkit-input-placeholder { /* Chrome/Opera/Safari */
@@ -72,6 +73,7 @@
 		}
 		&:focus, &:active {
 			background-color: rgba($grey-blue, .25);
+			text-decoration: none;
 
 			&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
 				color: rgba($grey-blue, .3);
