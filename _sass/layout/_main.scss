@@ -1,19 +1,19 @@
 .main {
 	position: relative;
-	background-image: url("../img/vinci-main-bg.jpg");
+	min-height: 62vw;
+	background-image: url("../img/vinci-main-bg-xs.jpg");
 	background-position: center bottom;
 	background-repeat: no-repeat;
 	background-size: contain;
 	padding-bottom: 230px;
 
-	@media (max-height:64vw) {
-		background-size: cover;
-	}
 	@media (min-width:$screen-xs-min) {
+		background-image: url("../img/vinci-main-bg-md.jpg");
 		padding-bottom: 300px;
 	}
 	@media (min-width:$screen-sm-min) {
 		padding-bottom: 340px;
+			background-image: url("../img/vinci-main-bg-lg.jpg");
 	}
 	@media (min-width:$screen-md-min) {
 		padding-bottom: 440px;

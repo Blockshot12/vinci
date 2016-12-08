@@ -1,9 +1,16 @@
 .header {
 	position: relative;
-	background-image: url("../img/vinci-header-bg.jpg");
+	background-image: url("../img/vinci-header-bg-sm.jpg");
 	background-position: right bottom;
 	background-repeat: no-repeat;
 	background-size: cover;
+
+	@media (min-width:$screen-sm-min) {
+		background-image: url("../img/vinci-header-bg-md.jpg");
+	}
+	@media (min-width:$screen-md-min) {
+		background-image: url("../img/vinci-header-bg-lg.jpg");
+	}
 
 	> .header-container {
 		display: block;
@@ -128,7 +135,7 @@
 	}
 	@media (min-width:$screen-lg-min) {
 		&.header-homepage {
-			height: 500px;
+			height: 480px;
 
 			h1.header-homepage-title {
 				font-size: 42px;
